@@ -1,0 +1,7 @@
+keras
+tensorflow==1.14.0
+pandas
+numpy==1.14.5
+pandas_datareader
+sklearn
+matplotlib
