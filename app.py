@@ -12,7 +12,20 @@ from keras.models import load_model
 import pickle
 app = Flask(__name__)
 
-@app.route("/")
+
+
+@app.route("/getAllValues")
+def getAllValue():
+    apple_quote = web.DataReader('AAPL', data_source='yahoo', start='2012-01-01', end='2019-12-17')
+    #Create a new dataframe
+    new_df = apple_quote.filter(['Close'])
+    return new_df.to_json(orient='table')
+    
+    
+    
+###################################################################
+
+@app.route("/predictLastValue")
 def hello():
     file = open('model/scaler.pkl', 'rb')
     # dump information to that file
@@ -45,4 +58,23 @@ def hello():
 
 
 
-    return json.dumps({'value': str(pred_price[0][0])})
+    return json.dumps({"Date": "2019-12-17T00:00:00.000Z", "Close": str(pred_price[0][0])} ) 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
