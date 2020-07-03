@@ -5,9 +5,6 @@ import pandas_datareader as web
 import numpy as np
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
-#from keras.models import Sequential
-#from keras.layers import Dense, LSTM
-#import matplotlib.pyplot as plt
 from keras.models import load_model
 import pickle
 app = Flask(__name__)
@@ -32,7 +29,7 @@ def hello():
     scaler = pickle.load(file)
     # close the file
     file.close()
-
+	
     apple_quote = web.DataReader('AAPL', data_source='yahoo', start='2012-01-01', end='2019-12-17')
     #Create a new dataframe
     new_df = apple_quote.filter(['Close'])
@@ -54,7 +51,6 @@ def hello():
     pred_price = model.predict(X_test)
     #undo the scaling 
     pred_price = scaler.inverse_transform(pred_price)
-    
 
 
 
