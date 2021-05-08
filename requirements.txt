@@ -14,7 +14,7 @@ cycler==0.10.0
 defer==1.0.6
 distro-info===0.18ubuntu0.18.04.1
 dnspython==1.16.0
-eventlet==0.25.2
+eventlet==0.31.0
 Flask==1.1.2
 gast==0.3.3
 google-pasta==0.2.0
