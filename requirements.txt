@@ -46,7 +46,7 @@ MarkupSafe==1.1.1
 matplotlib==3.2.1
 mock==4.0.2
 monotonic==1.5
-nameko==2.12.0
+nameko==2.14.0
 netifaces==0.10.4
 numpy==1.18.5
 oauth==1.0.1
