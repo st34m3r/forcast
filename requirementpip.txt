@@ -35,7 +35,7 @@ html5lib==0.999999999
 idna==2.9
 importlib-metadata==1.6.0
 ipaddress==1.0.17
-joblib==0.14.1
+joblib==1.2.0
 jsonschema==2.6.0
 Keras==2.3.1
 Keras-Applications==1.0.8
